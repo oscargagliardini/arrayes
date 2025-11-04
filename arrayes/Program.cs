@@ -52,6 +52,17 @@ namespace arrayes
                 }
                 
             }
+            if(z==3){
+
+            int[] numD = { 4, 7, 8, 2, 9 7;
+            for (int i = 0; i < numD. Length; i++)
+            if (numD[i] % 2 == 1)
+            {
+            Console.Write("[" + numD[i] + "]");
+            
+            }
+             
+            }  
         }
     }
 }
