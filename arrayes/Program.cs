@@ -1,3 +1,5 @@
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace arrayes
 {
     internal class Program
@@ -161,7 +163,28 @@ namespace arrayes
                 }
                 
             }
+            if (z == 8)
+            {
+                int[] v1 = { 2, 3, -5, -8,79,108};
+                int[] v2 = { 20, 4, -7, 22,10 };
+                int[] v3 = new int[v1.Length + v2.Length];
+                for (int i = 0; i < v1.Length; i++)
+                {
+                    v3 [i] = v1[i];
+                }
+                for (int i = v1.Length; i < v3.Length; i++)
+                {
+                    v3[i] = v2[i-v1.Length];
+                }
+                for(int i=0; i < v3.Length; i++)
+                {
+                    Console.WriteLine(v3[i]);
+                }
+            }
+            if (z == 9)
+            {
 
+            }
         }
     }
 }
