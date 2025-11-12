@@ -3,7 +3,32 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace arrayes
 {
     internal class Program
-    {
+    { static int  CountElements (int []Vet,int x )
+ {
+      int count = 0;
+      for (int i = 0; i < Vet.Length; i++)
+      {
+          if(Vet[i] == x )
+          {
+              count++;
+          }
+      }
+      return count;
+ }
+  static int FindElement(int[] Vet, int x)
+  {
+      int posizione = -1;
+      for (int i = 0; i < Vet.Length; i++)
+      {
+          if (Vet[i] == x)
+          {
+              return i;
+          }
+      }
+     
+      return posizione;
+  }
+       
         static void Main(string[] args)
         {
             //  selezione esercizi 
@@ -185,6 +210,32 @@ namespace arrayes
             {
 
             }
+             if (z == 11)
+ {
+     int[] v1 = { 2, 3, -5, -3, 79, 1 };
+     Console.WriteLine("dimmi il numero che vuoi verificare");
+     int x = Convert.ToInt32(Console.ReadLine());
+
+     int risultato = CountElements(v1, x);
+
+     Console.WriteLine(risultato);
+
+ }
+ if (z==13)
+ {
+     int[] v1 = { 2, 3, -5, -3, 79, 1 };
+     Console.WriteLine("dimmi il numero che vuoi verificare");
+     int x = Convert.ToInt32(Console.ReadLine());
+     int risultato = FindElement(v1, x);
+     if (risultato == -1)
+     {
+         Console.WriteLine("non ce il numero");
+     }
+     else
+     {
+         Console.WriteLine(risultato);
+     }
+ }
         }
     }
 }
